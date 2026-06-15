@@ -19,3 +19,7 @@ yarn-error.log*
 # macOS / Windows
 .DS_Store
 Thumbs.db
+
+# local tooling / editor config
+.atl/
+.claude/
