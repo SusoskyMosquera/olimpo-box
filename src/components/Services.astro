@@ -1,0 +1,39 @@
+---
+import Section from "./ui/Section.astro";
+import { services } from "../data/services";
+---
+
+<Section id="servicios" eyebrow="Qué entrenas" title="Servicios">
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      services.map((service) => (
+        <article class="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+          <div class="relative aspect-square overflow-hidden bg-gradient-to-br from-zinc-800 to-black">
+            {service.image ? (
+              <img
+                src={service.image}
+                alt={service.name}
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            ) : (
+              <div class="flex h-full w-full items-center justify-center">
+                <span class="font-display text-6xl uppercase tracking-wider text-zinc-700">
+                  {service.name.charAt(0)}
+                </span>
+              </div>
+            )}
+            <span class="absolute inset-x-0 bottom-0 h-1 bg-amber-400" />
+          </div>
+          <div class="p-5">
+            <h3 class="font-display text-2xl uppercase tracking-wide text-amber-400">
+              {service.name}
+            </h3>
+            <p class="mt-2 font-body text-sm text-zinc-400">
+              {service.description}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</Section>

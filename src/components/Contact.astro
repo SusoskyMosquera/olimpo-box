@@ -1,0 +1,29 @@
+---
+import Section from "./ui/Section.astro";
+import WhatsAppButton from "./ui/WhatsAppButton.astro";
+import SocialLinks from "./ui/SocialLinks.astro";
+---
+
+<Section id="contacto" eyebrow="Da el primer paso" title="Contacto" alt>
+  <div
+    class="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center"
+  >
+    <p class="font-body text-lg text-zinc-300">
+      Tu mejor versión empieza con un mensaje. Escríbenos por WhatsApp y
+      resolvemos todas tus dudas — sin compromiso.
+    </p>
+
+    <WhatsAppButton
+      message="Hola Olimpo Box, quiero más información para empezar 💪"
+      label="Hablemos por WhatsApp"
+      class="text-2xl"
+    />
+
+    <div class="flex flex-col items-center gap-3">
+      <p class="font-data text-lg uppercase tracking-widest text-zinc-500">
+        Síguenos
+      </p>
+      <SocialLinks />
+    </div>
+  </div>
+</Section>

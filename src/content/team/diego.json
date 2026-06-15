@@ -1,0 +1,7 @@
+{
+  "name": "Diego",
+  "role": "Coach",
+  "specialties": ["Funcional", "CrossFit"],
+  "image": "/images/team/diego.jpg",
+  "order": 2
+}

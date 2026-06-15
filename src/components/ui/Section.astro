@@ -1,0 +1,51 @@
+---
+/**
+ * Standard section wrapper: anchor id, centered heading and a content slot.
+ * Reused by every page section to keep spacing and typography consistent.
+ */
+interface Props {
+  id: string;
+  title?: string;
+  eyebrow?: string;
+  /** Use the anthracite background for alternating sections. */
+  alt?: boolean;
+  class?: string;
+}
+
+const {
+  id,
+  title,
+  eyebrow,
+  alt = false,
+  class: className = "",
+}: Props = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    "scroll-mt-20 py-20 md:py-28",
+    alt ? "bg-zinc-900" : "bg-black",
+    className,
+  ]}
+>
+  <div class="mx-auto w-full max-w-6xl px-6">
+    {
+      (eyebrow || title) && (
+        <header class="mb-12 text-center">
+          {eyebrow && (
+            <p class="font-data text-xl uppercase tracking-widest text-amber-400">
+              {eyebrow}
+            </p>
+          )}
+          {title && (
+            <h2 class="font-display text-4xl uppercase tracking-wider text-white md:text-5xl">
+              {title}
+            </h2>
+          )}
+        </header>
+      )
+    }
+    <slot />
+  </div>
+</section>

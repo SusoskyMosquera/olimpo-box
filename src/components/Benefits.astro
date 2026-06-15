@@ -1,0 +1,33 @@
+---
+import Section from "./ui/Section.astro";
+import Icon from "./ui/Icon.astro";
+import { benefits } from "../data/benefits";
+---
+
+<Section id="beneficios" eyebrow="Por qué Olimpo" title="Beneficios" alt>
+  <div class="grid items-center gap-10 lg:grid-cols-2">
+    <img
+      src="/images/gallery/comunidad-01.jpg"
+      alt="Comunidad de Olimpo Box"
+      class="aspect-[4/5] w-full rounded-2xl object-cover"
+    />
+
+    <ul class="flex flex-col gap-7">
+      {
+        benefits.map((benefit) => (
+          <li class="flex gap-5">
+            <span class="shrink-0 text-amber-400">
+              <Icon name={benefit.icon} class="h-9 w-9" />
+            </span>
+            <div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-white">
+                {benefit.title}
+              </h3>
+              <p class="mt-1 font-body text-zinc-400">{benefit.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

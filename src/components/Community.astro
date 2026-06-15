@@ -1,0 +1,25 @@
+---
+import Section from "./ui/Section.astro";
+import { gallery } from "../data/gallery";
+---
+
+<Section
+  id="comunidad"
+  eyebrow="La familia Olimpo"
+  title="Comunidad"
+>
+  <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+    {
+      gallery.map((image) => (
+        <div class="group overflow-hidden rounded-xl">
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+      ))
+    }
+  </div>
+</Section>

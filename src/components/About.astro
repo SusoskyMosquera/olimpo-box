@@ -1,0 +1,53 @@
+---
+import Section from "./ui/Section.astro";
+
+const pillars: readonly string[] = [
+  "Sede oficial de la Batalla de Dioses",
+  "Cuatro modalidades bajo un mismo techo",
+  "Comunidad que entrena y crece junta",
+];
+
+// Optional ambiance photo. Drop the file and set the path to activate it.
+const aboutImage: string | undefined = "/images/about/box.jpg";
+---
+
+<Section id="nosotros" eyebrow="Nuestra esencia" title="Nosotros" alt>
+  {
+    aboutImage && (
+      <img
+        src={aboutImage}
+        alt="Interior de Olimpo Box"
+        class="mb-10 aspect-[16/9] w-full rounded-2xl object-cover"
+      />
+    )
+  }
+  <div class="grid items-center gap-10 lg:grid-cols-2">
+    <div class="flex flex-col gap-5">
+      <p class="font-body text-lg text-zinc-300">
+        En <span class="text-amber-400">Olimpo Box</span> creemos que cada atleta
+        lleva un dios adentro esperando ser forjado. Nacimos en Villavicencio con
+        una idea simple: combinar disciplina, técnica y comunidad para que entrenar
+        deje de ser una obligación y se convierta en un estilo de vida.
+      </p>
+      <p class="font-body text-lg text-zinc-300">
+        Aquí no hay atajos. Hay programación seria, coaches que te conocen por tu
+        nombre y un espacio pensado para que des lo mejor de ti, sesión tras sesión.
+        Ser sede del Torneo Nacional Batalla de Dioses no fue casualidad: es el
+        reflejo de la fuerza de nuestra comunidad.
+      </p>
+    </div>
+
+    <ul class="flex flex-col gap-4">
+      {
+        pillars.map((pillar) => (
+          <li class="flex items-center gap-4 rounded-2xl border border-zinc-800 bg-black p-5">
+            <span class="font-display text-3xl text-amber-400">✦</span>
+            <span class="font-data text-2xl uppercase tracking-wide text-white">
+              {pillar}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

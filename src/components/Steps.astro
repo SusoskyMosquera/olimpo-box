@@ -1,0 +1,28 @@
+---
+import Section from "./ui/Section.astro";
+import WhatsAppButton from "./ui/WhatsAppButton.astro";
+import { steps } from "../data/steps";
+import { site } from "../data/site";
+---
+
+<Section id="como-empezar" eyebrow="Tu primer paso" title="Cómo empezar" alt>
+  <div class="grid gap-6 md:grid-cols-3">
+    {
+      steps.map((step) => (
+        <article class="flex flex-col gap-3 rounded-2xl border border-zinc-800 bg-black p-7">
+          <span class="font-display text-6xl leading-none text-amber-400/40">
+            {step.number}
+          </span>
+          <h3 class="font-display text-2xl uppercase tracking-wide text-white">
+            {step.title}
+          </h3>
+          <p class="font-body text-zinc-400">{step.description}</p>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="mt-10 flex justify-center">
+    <WhatsAppButton message={site.freeTrial.message} label="Empieza ahora" />
+  </div>
+</Section>

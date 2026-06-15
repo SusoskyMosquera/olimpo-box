@@ -1,0 +1,73 @@
+---
+/** Small stroke-based icon set used across benefit and info cards. */
+interface Props {
+  name: "community" | "structure" | "equipment" | "space" | "pin";
+  class?: string;
+}
+
+const { name, class: className = "h-8 w-8" }: Props = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={className}
+  aria-hidden="true"
+>
+  {
+    name === "community" && (
+      <Fragment>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </Fragment>
+    )
+  }
+  {
+    name === "structure" && (
+      <Fragment>
+        <path d="M3 3v18h18" />
+        <rect x="7" y="13" width="3" height="5" />
+        <rect x="12" y="9" width="3" height="9" />
+        <rect x="17" y="5" width="3" height="13" />
+      </Fragment>
+    )
+  }
+  {
+    name === "equipment" && (
+      <Fragment>
+        <path d="m6.5 6.5 11 11" />
+        <path d="m21 21-1-1" />
+        <path d="m3 3 1 1" />
+        <path d="m18 22 4-4" />
+        <path d="m2 6 4-4" />
+        <path d="m3 10 7-7" />
+        <path d="m14 21 7-7" />
+      </Fragment>
+    )
+  }
+  {
+    name === "space" && (
+      <Fragment>
+        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+        <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+        <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+      </Fragment>
+    )
+  }
+  {
+    name === "pin" && (
+      <Fragment>
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+        <circle cx="12" cy="10" r="3" />
+      </Fragment>
+    )
+  }
+</svg>
