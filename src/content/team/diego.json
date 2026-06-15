@@ -1,8 +1,8 @@
 {
   "name": "Diego",
   "role": "Coach",
-  "specialties": ["Calistenia", "Street Workout"],
-  "bio": "Licenciado en Educación Física en formación con 2 años de experiencia como entrenador.",
+  "specialties": ["Calistenia", "CrossFit"],
+  "bio": "Licenciado en Educación Física y Deportes en formación, entrenador con 2 años de experiencia y más de 5 años como deportista de CrossFit y Calistenia, especializado en mejorar el rendimiento físico mediante programas personalizados basados en la ciencia del ejercicio.",
   "image": "/images/team/diego.jpg",
   "order": 2
 }
