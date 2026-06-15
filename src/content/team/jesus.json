@@ -2,6 +2,7 @@
   "name": "Jesús",
   "role": "Coach",
   "specialties": ["Calistenia", "Street Workout"],
+  "bio": "Con 4 años de experiencia como entrenador y enfoque en entrenamiento personalizado.",
   "image": "/images/team/jesus.jpg",
   "order": 3
 }

@@ -14,7 +14,7 @@ export const services: readonly Service[] = [
     name: "CrossFit",
     description:
       "Entrenamiento de alta intensidad que combina fuerza, resistencia y movilidad. Cada WOD te reta a superar tu marca anterior.",
-    image: "/images/services/crossfit.jpg",
+    image: "/images/services/crossfit.jpeg",
   },
   {
     slug: "functional",
@@ -28,7 +28,7 @@ export const services: readonly Service[] = [
     name: "Calistenia",
     description:
       "Domina tu propio peso corporal. Fuerza, equilibrio y skills de street workout — la disciplina que nos hizo sede de la Batalla de Dioses.",
-    image: "/images/services/calisthenics.jpg",
+    image: "/images/services/calisthenics.jpeg",
   },
   {
     slug: "open-box",

@@ -2,6 +2,7 @@
   "name": "Maicol",
   "role": "Head Coach",
   "specialties": ["CrossFit", "Weightlifting"],
-  "image": "/images/team/maicol.jpg",
+  "bio": "Técnico en entrenamiento deportivo, con certificación CrossFit nivel 1, entrenador personalizado y 5 años de experiencia como entrenador.",
+  "image": "/images/team/maicol.jpeg",
   "order": 1
 }

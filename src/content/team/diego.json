@@ -2,6 +2,7 @@
   "name": "Diego",
   "role": "Coach",
   "specialties": ["Funcional", "CrossFit"],
+  "bio": "Licenciado en Educación Física en formación con 2 años de experiencia como entrenador.",
   "image": "/images/team/diego.jpg",
   "order": 2
 }
